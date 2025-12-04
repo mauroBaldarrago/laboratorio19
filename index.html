@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Pokédex 12</title>
 
     <style>
         body {
@@ -13,29 +13,47 @@
             text-align: center;
         }
 
-        #card {
+        #container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             margin-top: 20px;
+        }
+
+        .card {
             background: white;
-            padding: 20px;
+            width: 180px;
+            padding: 15px;
             border-radius: 10px;
-            width: 300px;
-            margin-left: auto;
-            margin-right: auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
         img {
             width: 120px;
         }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
     </style>
 </head>
 <body>
 
-    <input id="pokeInput" placeholder="Ingresa nombre o ID">
-    <button onclick="buscarTipos()">Buscar</button>
+    <h1>Pokédex Primeros 12 Pokémon</h1>
 
-    <div id="card"></div>
+    <div id="container"></div>
 
-    <script src="prueba09.js"></script>
+    <button id="btnPrev" onclick="mostrarAnterior()">Anterior</button>
+    <button id="btnNext" onclick="mostrarSiguiente()">Siguiente</button>
+
+    <script src="prueba12.js"></script>
 </body>
 </html>
